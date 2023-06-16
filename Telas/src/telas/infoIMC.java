@@ -11,6 +11,9 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import java.awt.Font;
 
 public class infoIMC extends JFrame {
 
@@ -80,17 +83,30 @@ public class infoIMC extends JFrame {
 		Menu.add(menuSair);
 		
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 583, 472);
-		getContentPane().setLayout(null);
+		
 		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 737, 442);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel label = new JLabel("New label");
+		label.setBounds(0, 0, 0, 0);
+		contentPane.add(label);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setIcon(new ImageIcon(infoIMC.class.getResource("/imagens/imc2.png")));
+		lblNewLabel.setBounds(10, 11, 691, 329);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("IMC");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 48));
+		lblNewLabel_1.setBounds(101, 358, 274, 70);
+		contentPane.add(lblNewLabel_1);
 	}
-
 }

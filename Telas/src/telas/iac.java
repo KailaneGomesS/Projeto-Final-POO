@@ -16,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JTextPane;
@@ -63,14 +64,16 @@ public class iac extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu Menu = new JMenu("MENU");
+		JMenu Menu = new JMenu("");
+		Menu.setIcon(new ImageIcon(imc.class.getResource("/imagens/menu.png")));
 		Menu.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(Menu);
 		
 		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Modo de Uso");
+		mntmNewMenuItem_3.setIcon(new ImageIcon(imc.class.getResource("/imagens/info.png")));
 		mntmNewMenuItem_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				infoIMC info= new infoIMC ();
+				iacframe info= new iacframe ();
 		          info.setVisible(true);
 			
 			}
@@ -78,6 +81,7 @@ public class iac extends JFrame {
 		Menu.add(mntmNewMenuItem_3);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Tela Inicial");
+		mntmNewMenuItem_1.setIcon(new ImageIcon(imc.class.getResource("/imagens/inicio.png")));
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -89,6 +93,7 @@ public class iac extends JFrame {
 		Menu.add(mntmNewMenuItem_1);
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Sobre a equipe");
+		mntmNewMenuItem_2.setIcon(new ImageIcon(imc.class.getResource("/imagens/code.png")));
 		mntmNewMenuItem_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Sobre sEquipe= new Sobre ();
@@ -99,6 +104,7 @@ public class iac extends JFrame {
 		Menu.add(mntmNewMenuItem_2);
 		
 		JMenuItem menuSair= new JMenuItem("Sair");
+		menuSair.setIcon(new ImageIcon(imc.class.getResource("/imagens/sair.png")));
 		menuSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -110,7 +116,6 @@ public class iac extends JFrame {
 	
 		menuSair.setHorizontalAlignment(SwingConstants.CENTER);
 		Menu.add(menuSair);
-		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 583, 472);
@@ -245,5 +250,17 @@ public class iac extends JFrame {
 		btnLimpar.setFont(new Font("Times New Roman", Font.BOLD, 17));
 		btnLimpar.setBounds(218, 329, 106, 23);
 		getContentPane().add(btnLimpar);
+		
+		JLabel lblUseOFormato = new JLabel("Use o formato: 999.999");
+		lblUseOFormato.setHorizontalAlignment(SwingConstants.CENTER);
+		lblUseOFormato.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		lblUseOFormato.setBounds(348, 226, 157, 20);
+		getContentPane().add(lblUseOFormato);
+		
+		JLabel lblParaAlturaUse = new JLabel("Use o formato: 9.99");
+		lblParaAlturaUse.setHorizontalAlignment(SwingConstants.CENTER);
+		lblParaAlturaUse.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		lblParaAlturaUse.setBounds(348, 195, 157, 20);
+		getContentPane().add(lblParaAlturaUse);
 	}
 }

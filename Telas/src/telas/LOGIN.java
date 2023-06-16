@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
@@ -49,13 +50,14 @@ public class LOGIN extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu Menu = new JMenu("MENU");
+		JMenu Menu = new JMenu("");
+		Menu.setIcon(new ImageIcon(imc.class.getResource("/imagens/menu.png")));
 		Menu.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(Menu);
-		
-	
+
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Sobre a equipe");
+		mntmNewMenuItem_2.setIcon(new ImageIcon(imc.class.getResource("/imagens/code.png")));
 		mntmNewMenuItem_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Sobre sEquipe= new Sobre ();
@@ -66,6 +68,7 @@ public class LOGIN extends JFrame {
 		Menu.add(mntmNewMenuItem_2);
 		
 		JMenuItem menuSair= new JMenuItem("Sair");
+		menuSair.setIcon(new ImageIcon(imc.class.getResource("/imagens/sair.png")));
 		menuSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -77,32 +80,22 @@ public class LOGIN extends JFrame {
 	
 		menuSair.setHorizontalAlignment(SwingConstants.CENTER);
 		Menu.add(menuSair);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 312);
+		getContentPane().setLayout(null);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 312);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JButton btnNewButton = new JButton("Sair");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
-		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		btnNewButton.setBounds(52, 205, 89, 23);
-		contentPane.add(btnNewButton);
 		
 		JButton entrar = new JButton("Entrar");
 		entrar.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		entrar.setIcon(new ImageIcon(imc.class.getResource("/imagens/entrar.png")));
 		entrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(usuario.getText().equals("teste") && senha.getText().equals("123")){
@@ -116,7 +109,7 @@ public class LOGIN extends JFrame {
 			}
 			
 		});
-		entrar.setBounds(270, 205, 89, 23);
+		entrar.setBounds(163, 198, 101, 30);
 		contentPane.add(entrar);
 		
 		usuario = new JTextField();
@@ -137,7 +130,7 @@ public class LOGIN extends JFrame {
 		JLabel lblNewLabel_2 = new JLabel("LOGIN");
 		lblNewLabel_2.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(132, 32, 122, 14);
+		lblNewLabel_2.setBounds(152, 31, 122, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblSenha = new JLabel("Senha:");

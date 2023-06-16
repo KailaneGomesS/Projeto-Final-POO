@@ -11,10 +11,13 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JScrollPane;
+import javax.swing.JScrollBar;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import java.awt.BorderLayout;
 
 public class infoIAC extends JFrame {
-
-	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -81,15 +84,13 @@ public class infoIAC extends JFrame {
 		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 583, 472);
+		setBounds(100, 100, 625, 371);
 		getContentPane().setLayout(null);
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
-		setContentPane(contentPane);
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(609, 0, 2, 312);
+		getContentPane().add(scrollPane);
+		
+	
 	}
-
 }

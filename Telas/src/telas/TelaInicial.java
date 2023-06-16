@@ -1,11 +1,13 @@
 package telas;
 
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -43,23 +45,14 @@ public class TelaInicial extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu Menu = new JMenu("MENU");
+		JMenu Menu = new JMenu("");
+		Menu.setIcon(new ImageIcon(imc.class.getResource("/imagens/menu.png")));
 		Menu.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(Menu);
-		
-		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Modo de Uso");
-		mntmNewMenuItem_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				infoInicial info= new infoInicial ();
-		          info.setVisible(true);
-			
-			}
-		});
-		Menu.add(mntmNewMenuItem_3);
-		
 	
-		
+	
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Sobre a equipe");
+		mntmNewMenuItem_2.setIcon(new ImageIcon(imc.class.getResource("/imagens/code.png")));
 		mntmNewMenuItem_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Sobre sEquipe= new Sobre ();
@@ -70,6 +63,7 @@ public class TelaInicial extends JFrame {
 		Menu.add(mntmNewMenuItem_2);
 		
 		JMenuItem menuSair= new JMenuItem("Sair");
+		menuSair.setIcon(new ImageIcon(imc.class.getResource("/imagens/sair.png")));
 		menuSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -81,11 +75,10 @@ public class TelaInicial extends JFrame {
 	
 		menuSair.setHorizontalAlignment(SwingConstants.CENTER);
 		Menu.add(menuSair);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 583, 472);
+		getContentPane().setLayout(null);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);

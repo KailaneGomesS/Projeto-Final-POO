@@ -23,6 +23,7 @@ import com.jgoodies.forms.factories.DefaultComponentFactory;
 import java.awt.SystemColor;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.ImageIcon;
 
 public class imc extends JFrame {
 
@@ -60,14 +61,16 @@ public class imc extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu Menu = new JMenu("MENU");
+		JMenu Menu = new JMenu("");
+		Menu.setIcon(new ImageIcon(imc.class.getResource("/imagens/menu.png")));
 		Menu.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(Menu);
 		
 		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Modo de Uso");
+		mntmNewMenuItem_3.setIcon(new ImageIcon(imc.class.getResource("/imagens/info.png")));
 		mntmNewMenuItem_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				infoIMC info= new infoIMC ();
+				imcframe info= new imcframe ();
 		          info.setVisible(true);
 			
 			}
@@ -75,6 +78,7 @@ public class imc extends JFrame {
 		Menu.add(mntmNewMenuItem_3);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Tela Inicial");
+		mntmNewMenuItem_1.setIcon(new ImageIcon(imc.class.getResource("/imagens/inicio.png")));
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -86,6 +90,7 @@ public class imc extends JFrame {
 		Menu.add(mntmNewMenuItem_1);
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Sobre a equipe");
+		mntmNewMenuItem_2.setIcon(new ImageIcon(imc.class.getResource("/imagens/code.png")));
 		mntmNewMenuItem_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Sobre sEquipe= new Sobre ();
@@ -96,6 +101,7 @@ public class imc extends JFrame {
 		Menu.add(mntmNewMenuItem_2);
 		
 		JMenuItem menuSair= new JMenuItem("Sair");
+		menuSair.setIcon(new ImageIcon(imc.class.getResource("/imagens/sair.png")));
 		menuSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
