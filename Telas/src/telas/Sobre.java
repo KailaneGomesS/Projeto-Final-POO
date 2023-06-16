@@ -54,16 +54,6 @@ public class Sobre extends JFrame {
 		Menu.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(Menu);
 		
-		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Modo de Uso");
-		mntmNewMenuItem_3.setIcon(new ImageIcon(imc.class.getResource("/imagens/info.png")));
-		mntmNewMenuItem_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				infoIAC info= new infoIAC ();
-		          info.setVisible(true);
-			
-			}
-		});
-		Menu.add(mntmNewMenuItem_3);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Tela Inicial");
 		mntmNewMenuItem_1.setIcon(new ImageIcon(imc.class.getResource("/imagens/inicio.png")));
