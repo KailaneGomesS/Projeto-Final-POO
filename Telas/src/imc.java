@@ -69,7 +69,7 @@ public class imc extends JFrame {
 		mntmNewMenuItem_3.setIcon(new ImageIcon(imc.class.getResource("/imagens/info.png")));
 		mntmNewMenuItem_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				imcframe info= new imcframe ();
+				infoimc info= new infoimc ();
 		          info.setVisible(true);
 			
 			}
