@@ -73,7 +73,7 @@ public class iac extends JFrame {
 		mntmNewMenuItem_3.setIcon(new ImageIcon(imc.class.getResource("/imagens/info.png")));
 		mntmNewMenuItem_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				iacframe info= new iacframe ();
+				infoiac info= new infoiac ();
 		          info.setVisible(true);
 			
 			}
